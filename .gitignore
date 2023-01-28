@@ -1,0 +1,19 @@
+node_modules
+
+.cache
+.eslintcache
+.env
+.vercel
+.output
+
+/build/
+/public/build
+/api/index.js
+/api/index.js.map
+/app/tailwind.css
+
+.nvmrc
+
+# IDE
+.vscode/
+.embold/

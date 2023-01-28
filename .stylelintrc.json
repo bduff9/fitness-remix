@@ -1,0 +1,14 @@
+{
+  "extends": [
+    "stylelint-config-recommended",
+    "stylelint-config-tailwindcss"
+  ],
+  "ignoreFiles": [
+    "public/build/**/*",
+    "**/*.{map,md,json,ts,tsx,js,jsx}",
+    "app/tailwind.css"
+  ],
+  "rules": {
+    "font-weight-notation": "named-where-possible"
+  }
+}

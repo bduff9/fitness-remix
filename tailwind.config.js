@@ -1,0 +1,70 @@
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+	content: ['./app/**/*.tsx'],
+	theme: {
+		extend: {
+			fontFamily: {
+				sans: ['Cairo Play', 'sans-serif'],
+			},
+			colors: {
+				theme: {
+					light: '#f2f2e6',
+					dark: '#07020a',
+				},
+				sapphireBlue: {
+					50: '#f1c7e8',
+					100: '#eaa9ef',
+					200: '#a670ea',
+					300: '#433ee1',
+					400: '#184fd4',
+					500: '#0062c1',
+					600: '#0064a6',
+					700: '#004e85',
+					800: '#002e5f',
+					900: '#041335',
+				},
+				kinkyKoala: {
+					50: '#f1c9c7',
+					100: '#efa9af',
+					200: '#ea709c',
+					300: '#e13ea2',
+					400: '#d418b4',
+					500: '#bf00c1',
+					600: '#8e00a6',
+					700: '#650085',
+					800: '#42005f',
+					900: '#250435',
+				},
+				crema: {
+					50: '#f1edc7',
+					100: '#efe7a9',
+					200: '#ead470',
+					300: '#e1b73e',
+					400: '#d48f18',
+					500: '#c15f00',
+					600: '#a63500',
+					700: '#851000',
+					800: '#5f000b',
+					900: '#350415',
+				},
+				waystoneGreen: {
+					50: '#d1f1c7',
+					100: '#b3efa9',
+					200: '#70ea71',
+					300: '#3ee14d',
+					400: '#18d429',
+					500: '#01c100',
+					600: '#24a600',
+					700: '#468500',
+					800: '#575f00',
+					900: '#352204',
+				},
+			},
+		},
+	},
+	plugins: [
+		require('@tailwindcss/container-queries'),
+		require('@tailwindcss/forms'),
+		require('@tailwindcss/typography'),
+	],
+};
