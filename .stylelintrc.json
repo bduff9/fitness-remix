@@ -6,7 +6,9 @@
   "ignoreFiles": [
     "public/build/**/*",
     "**/*.{map,md,json,ts,tsx,js,jsx}",
-    "app/tailwind.css"
+    "app/tailwind.css",
+    "docker/**/*",
+    "docker-compose.yml"
   ],
   "rules": {
     "font-weight-notation": "named-where-possible"

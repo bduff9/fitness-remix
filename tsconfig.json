@@ -30,5 +30,10 @@
     "strictPropertyInitialization": true,
     "target": "ES2019",
     "typeRoots": ["./node_modules/@types", "./common/types"]
+  },
+  "ts-node": {
+    "compilerOptions": {
+      "module": "CommonJS"
+    }
   }
 }

@@ -10,7 +10,9 @@
     {
       "files": [
         "**/*.ts",
-        "**/*.js"
+        "**/*.tsx",
+        "**/*.js",
+        "**/*.jsx"
       ],
       "options": {
         "singleQuote": true,
