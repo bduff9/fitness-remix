@@ -11,7 +11,6 @@ import { renderMJML, getID } from '~/utils/email';
 import type { EmailType } from '~/utils/types';
 import { EmailTypes } from '~/utils/types';
 
-//TODO: bring in mjml and email renderer
 const { domain } = env;
 
 export type EmailView = 'html' | 'rawSubject' | 'text';

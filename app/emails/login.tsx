@@ -77,7 +77,7 @@ const LoginEmail: FC<LoginEmailProps> = ({
 					</MjmlText>
 					<MjmlButton
 						align="center"
-						background-color="#15803d"
+						background-color="rgb(59, 130, 246)"
 						href={url}
 						border-radius="3px"
 						border="none"

@@ -54,6 +54,10 @@ const getOrCreateUser = async (
 		.executeTakeFirst();
 
 	if (!user) {
+		if (!first_name || !last_name) {
+			throw new Error('User not found, did you mean to register?');
+		}
+
 		const { id } = await db
 			.insertInto('User')
 			.values({
@@ -189,13 +193,18 @@ authenticator.use(
 		// you will receive the email address, form data and whether or not this is being called after clicking on magic link
 		// and you should return the user instance
 		async ({ email, form }) => {
-			const user = await getOrCreateUser(
-				[email],
-				form.get('first_name')?.toString() ?? '',
-				form.get('last_name')?.toString() ?? '',
-			);
+			try {
+				const user = await getOrCreateUser(
+					[email],
+					form.get('first_name')?.toString() ?? '',
+					form.get('last_name')?.toString() ?? '',
+				);
 
-			return user;
+				return user;
+			} catch (error) {
+				console.error('Failed to login user', error);
+				throw error;
+			}
 		},
 	),
 );

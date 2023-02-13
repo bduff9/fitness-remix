@@ -2,7 +2,6 @@ import {
 	MjmlAll,
 	MjmlAttributes,
 	MjmlColumn,
-	MjmlImage,
 	MjmlSection,
 	MjmlStyle,
 	MjmlText,
@@ -17,7 +16,6 @@ export type BaseEmailProps = {
 
 export const EmailHeader: FC<Pick<BaseEmailProps, 'browserLink' | 'domain'>> = ({
 	browserLink,
-	domain,
 }) => (
 	<>
 		<MjmlSection padding="0 0 15px 0" css-class="hide-for-browser">
@@ -40,14 +38,9 @@ export const EmailHeader: FC<Pick<BaseEmailProps, 'browserLink' | 'domain'>> = (
 			padding="25px 20px"
 		>
 			<MjmlColumn background-color="transparent">
-				<MjmlImage
-					align="center"
-					alt="Football Image"
-					border="none"
-					src={`${domain}/football.png`}
-					title="Football Image"
-					width="150px"
-				/>
+				<MjmlText align="center" fontSize="80px">
+					💪
+				</MjmlText>
 			</MjmlColumn>
 		</MjmlSection>
 	</>
